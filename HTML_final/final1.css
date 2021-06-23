@@ -1,0 +1,327 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+*,*::before,*::after{
+    box-sizing: border-box;
+}
+
+/* main css */
+
+body{
+    font-family: Microsoft JhengHei;
+}
+
+.container{
+	max-width: 1000px;
+	margin: 0 auto;
+}
+a{
+	display:block;
+	text-decoration: none;
+
+}
+/* socialMedia */
+.socialMedia {
+    background-color: #f6f6f6;
+	padding: 5px 5px;
+  }
+.socialMedia ul li:first-child:after {
+	content: "|";
+	color: gray;
+	margin: 5px;
+}
+.contactUsTop{
+	display: flex;
+	justify-content:flex-end;
+	font-size: 12px;
+	line-height: 12px;
+	text-align: right;
+}
+.contactUsTop li{
+	display: flex;
+}
+.socialMedia a{
+	display: flex;
+	align-items: center;
+}
+.socialMedia a:hover{
+	font-weight: bold;
+}
+.FB{
+	color:blue;
+}
+.Twitter{
+	color:#73cdf1;
+}
+/* navbar */
+.navbar{
+	display: flex;
+	justify-content: space-between;
+}
+.navbarLogo {
+	background-image: url(./img/logo.png);
+	display: block;
+	width: 224px;
+	height: 50px;
+	text-indent: 101%;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.navbarLogo a:hover{
+	transform:scale(1.05,1.05);
+}
+.menu{
+	display: flex;
+	/*padding: 16px;*/
+}
+.menu li a{
+	padding: 17px;
+	margin-left: 20px;
+	color: #00cc99;
+	position:relative;
+	z-index: 1;
+}
+.menu li a:hover {
+	color: white;
+	font-weight: bold;
+}
+.menu li a:after {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	margin: auto;
+	width: 100%;
+	height: 50px;
+	content: 'ʕ•ᴥ•ʔ';
+	text-align: center;
+	font-size: 12px;
+	color: white;
+	background: #00cc99;
+	box-shadow:0 1.75px 5px #C0C0C0;
+	visibility: none;
+	opacity: 0;
+	z-index: -1;
+}
+.menu li a:hover:after {
+	opacity: 1;
+	visibility: visible;
+	height: 100%;
+	transition: 0.5s;
+}
+/* banner */
+.banner{
+	display:flex;
+    height: 346px;
+	align-items: center;
+	background-image: url(img/banner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.banner h1{
+	display:flex;
+	align-items: center;
+	flex-grow:1;
+	height: 160px;
+	font-size: 32px;
+	padding-left: 20px;
+	line-height: 1.5;
+    color: white;
+    background-color: rgba(0,0,0,0.2);
+}
+/* courses */
+.courses{
+	padding-top: 60px;
+	padding-left: 20px;
+	padding-right: 20px;
+	display: flex;
+	justify-content: space-between;
+}
+.courses-item{
+	width: 300px;
+	padding: 24px 22px 16px 22px;
+	text-align: center;
+	box-shadow:0 1.75px 5px #C0C0C0;
+}
+.courses-item img{
+	width: 223px;
+	height: 139px;
+	object-fit: contain;
+}
+.courses-item h3{
+	margin-top: 12px;
+	padding-bottom: 10px;
+	font-size: 20px;
+	font-weight: bold;
+}
+.courses-item p, .JQ{
+	text-align: justify;
+	font-size: 14px;
+	letter-spacing: 0.75px;
+	line-height: 1.5;
+}
+/*.JQ li:before {
+    content:"· ";
+    vertical-align:middle;
+    line-height:20px;
+}*/
+.JQ li{
+	margin-left: 15px;
+	list-style:disc;
+}
+.courses-item:hover{
+	transform:scale(1.05,1.05);
+}
+
+/* compare */
+.compare{
+	padding: 65px 80px 60px 80px;
+}
+.compare h2{
+    margin-bottom: 30px;
+    font-size: 22px;
+    text-align: center;
+    color: black;
+}
+.colored{
+    color: #42b392;
+	font-weight: bold;
+}
+.course-compare th{
+    background: #f7f7f7;
+    font-weight: bold;
+}
+.course-compare{
+    width: 100%;
+    margin: 0 auto;
+}
+.course-compare tr:hover{
+	background: rgba(200, 247, 197, 0.2);
+}
+.course-compare th, td{
+    border-top: 1px solid #dddddd;
+	border-bottom: 1px solid #dddddd;
+    padding: 8px 0 13px 20px;
+    text-align: left;
+}
+/* contactInfo */
+.contactInfo{
+	padding: 36px 20px 30px 20px;
+	background: linear-gradient(#00654c,#009772);
+}
+.contactInfo h2{
+	font-size: 24px;
+	line-height: 1.25;
+	color: white;
+	text-align: center;
+}
+.contactInfo-container{
+	display: flex;
+	justify-content: space-between;
+	margin-top: 32px;
+}
+.message,.personalInfo{
+	width: 48%;
+}
+.message, .personalInfo input, .personalInfo button{
+	border: none;
+	border-radius: 5px;
+}
+.personalInfo label{
+	font-size: 14px;
+	color: white;
+}
+.personalInfo input{
+	display: block;
+	width: 100%;
+	height: 34px;
+	margin: 5px 0 16px 0;
+	font-size: 10px;
+}
+.personalInfo input:focus,.message:focus,.personalInfo button:hover{
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(255, 255, 255, 0.8);
+    outline: 0 none;
+}
+.personalInfo button{
+	width: 70px;
+	height: 30px;
+	float: right;
+	clear:both ;
+	background: #00cc99;
+	color: white;
+	cursor: pointer;
+}
+/* footer */
+.footer {
+	display: flex;
+	justify-content:space-between;
+	margin: 25px 15px 50px 20px;
+}
+.footerLogo:hover{
+	transform:scale(1.05,1.05);
+}
+.footer img{
+	display:block;
+	margin:0;
+}
+.contactUsBottom{
+	line-height: 1.25;
+}
+.tel, .email{
+	color: black;
+}
+.tel:hover, .email:hover{
+	font-weight: bold;
+}
